@@ -1,0 +1,23 @@
+name: ZNoDrowned
+version: 1.0
+main: zhehe.NoDrowned.ZNoDrowned
+author: zhehe
+description: varo
+api-version: 1.13
+commands:
+  drowned_spawn:
+   description: Toggle Drowned Spawn
+   aliases:
+   - drowned_s
+   permission: ZNoDrowned.drowned_spawn
+   permission-message: You do not have permission!
+   usage: /<command> [on|off]
+permissions:
+  ZNoDrowned.drowned_spawn:
+   description: Allows drowned_spawn command
+   default: op
+  ZNoDrowned.*:
+   description: Wildcard permission
+   default: op
+   children:
+     ZNoDrowned.drowned_spawn: true
